@@ -160,7 +160,7 @@ public class TiendaTest
 
     // PRUEBAS DE INTEGRACIÓN NEGATIVAS
     @Test
-    @DisplayName("IT-08: Venta con pedido vacío lanza IllegalStateException")
+    @DisplayName("IT-08: Venta con pedido vacio lanza IllegalStateException")
     void testVentaPedidoVacioLanzaExcepcion()
     {
         // ARRANGE
