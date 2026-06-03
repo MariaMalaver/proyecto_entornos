@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: proyecto_entornos.TiendaTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 s -- in proyecto_entornos.TiendaTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.080 s -- in proyecto_entornos.TiendaTest

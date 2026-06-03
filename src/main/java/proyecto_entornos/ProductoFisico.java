@@ -72,9 +72,9 @@ public class ProductoFisico extends Producto //HERENCIA
         {
             return ENVIO_ESPANNA;
         }
-        switch (paisDestino.toUpperCase())
+        switch (paisDestino.trim().toUpperCase().replace("Ñ", "N").replace("ñ", "N")) 
         {
-            case "ESPAÑA":
+            case "ESPANA":
             case "ESPANNA":
                 return ENVIO_ESPANNA;
             case "FRANCIA":

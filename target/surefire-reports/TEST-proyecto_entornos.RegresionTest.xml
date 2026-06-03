@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="proyecto_entornos.ProductoFisicoTest" time="0.1" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="proyecto_entornos.RegresionTest" time="0.113" tests="23" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,9 +15,9 @@
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\maria\AppData\Local\Temp\surefire835283085337212671\surefirebooter-20260603170425787_3.jar C:\Users\maria\AppData\Local\Temp\surefire835283085337212671 2026-06-03T17-04-25_716-jvmRun1 surefire-20260603170425787_1tmp surefire_0-20260603170425787_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\maria\AppData\Local\Temp\surefire12763103789185620411\surefirebooter-20260603170409536_3.jar C:\Users\maria\AppData\Local\Temp\surefire12763103789185620411 2026-06-03T17-04-09_461-jvmRun1 surefire-20260603170409536_1tmp surefire_0-20260603170409536_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="proyecto_entornos.ProductoFisicoTest"/>
+    <property name="test" value="proyecto_entornos.RegresionTest"/>
     <property name="surefire.test.class.path" value="C:\Users\maria\Downloads\Entornos-de-desarrollo-\Entornos-de-desarrollo-3412d3313b91750f5d8ed4b6d26b7d6f1d6d2855\proyecto_entornos\target\test-classes;C:\Users\maria\Downloads\Entornos-de-desarrollo-\Entornos-de-desarrollo-3412d3313b91750f5d8ed4b6d26b7d6f1d6d2855\proyecto_entornos\target\classes;C:\Users\maria\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\maria\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\maria\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\maria\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\maria\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\maria\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\maria\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\maria\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\maria"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\maria\AppData\Local\Temp\surefire835283085337212671\surefirebooter-20260603170425787_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\maria\AppData\Local\Temp\surefire12763103789185620411\surefirebooter-20260603170409536_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.2+10-LTS-69"/>
@@ -61,14 +61,57 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testConEnvioElPrecioAumenta" classname="proyecto_entornos.ProductoFisicoTest" time="0.015"/>
-  <testcase name="testSinEnvioElPrecioNoVaria" classname="proyecto_entornos.ProductoFisicoTest" time="0.001"/>
-  <testcase name="testEnvioNegativoFalla" classname="proyecto_entornos.ProductoFisicoTest" time="0.001"/>
-  <testcase name="testPrecioFinalConVariosProductos(double, double, double)[1]" classname="proyecto_entornos.ProductoFisicoTest" time="0.016"/>
-  <testcase name="testPrecioFinalConVariosProductos(double, double, double)[2]" classname="proyecto_entornos.ProductoFisicoTest" time="0.001"/>
-  <testcase name="testPrecioFinalConVariosProductos(double, double, double)[3]" classname="proyecto_entornos.ProductoFisicoTest" time="0.001"/>
-  <testcase name="testPrecioFinalConVariosProductos(double, double, double)[4]" classname="proyecto_entornos.ProductoFisicoTest" time="0.001"/>
-  <testcase name="testPrecioFinalConVariosProductos(double, double, double)[5]" classname="proyecto_entornos.ProductoFisicoTest" time="0.0"/>
-  <testcase name="testPrecioFinalSumaEnvio" classname="proyecto_entornos.ProductoFisicoTest" time="0.001"/>
-  <testcase name="testPrecioNegativoFalla" classname="proyecto_entornos.ProductoFisicoTest" time="0.0"/>
+  <testcase name="testIvaSuperReducido" classname="proyecto_entornos.RegresionTest" time="0.014"/>
+  <testcase name="testIvaReducido" classname="proyecto_entornos.RegresionTest" time="0.001"/>
+  <testcase name="testClienteSinDescuento" classname="proyecto_entornos.RegresionTest" time="0.001"/>
+  <testcase name="testEliminarProductoReduceLista" classname="proyecto_entornos.RegresionTest" time="0.001">
+    <system-out><![CDATA[Este cliente Test acaba de realizar un pedido.
+El producto SW ha sido añadido al pedido.
+El producto SW ha sido eliminado del pedido.
+]]></system-out>
+  </testcase>
+  <testcase name="testCalcularTotalParametrizado(double, double, double)[1]" classname="proyecto_entornos.RegresionTest" time="0.017">
+    <system-out><![CDATA[Este cliente Test acaba de realizar un pedido.
+El producto Prod ha sido añadido al pedido.
+]]></system-out>
+  </testcase>
+  <testcase name="testCalcularTotalParametrizado(double, double, double)[2]" classname="proyecto_entornos.RegresionTest" time="0.001">
+    <system-out><![CDATA[Este cliente Test acaba de realizar un pedido.
+El producto Prod ha sido añadido al pedido.
+]]></system-out>
+  </testcase>
+  <testcase name="testCalcularTotalParametrizado(double, double, double)[3]" classname="proyecto_entornos.RegresionTest" time="0.001">
+    <system-out><![CDATA[Este cliente Test acaba de realizar un pedido.
+El producto Prod ha sido añadido al pedido.
+]]></system-out>
+  </testcase>
+  <testcase name="testCalcularTotalParametrizado(double, double, double)[4]" classname="proyecto_entornos.RegresionTest" time="0.001">
+    <system-out><![CDATA[Este cliente Test acaba de realizar un pedido.
+El producto Prod ha sido añadido al pedido.
+]]></system-out>
+  </testcase>
+  <testcase name="testPrecioFinalDistintoAlBase" classname="proyecto_entornos.RegresionTest" time="0.001"/>
+  <testcase name="testConstructorProducto" classname="proyecto_entornos.RegresionTest" time="0.0"/>
+  <testcase name="testEnvioRestoMundoEsDiezPesos" classname="proyecto_entornos.RegresionTest" time="0.001"/>
+  <testcase name="testPedidoVacioLanzaExcepcion" classname="proyecto_entornos.RegresionTest" time="0.002"/>
+  <testcase name="testEnvioEspannaEsCero" classname="proyecto_entornos.RegresionTest" time="0.0"/>
+  <testcase name="testPrecioFinalMayorQuePrecioBase" classname="proyecto_entornos.RegresionTest" time="0.001"/>
+  <testcase name="testTotalPedidoConUnProducto" classname="proyecto_entornos.RegresionTest" time="0.0">
+    <system-out><![CDATA[Este cliente Maria acaba de realizar un pedido.
+El producto Monitor ha sido añadido al pedido.
+]]></system-out>
+  </testcase>
+  <testcase name="testIvaGeneralProductoDigital" classname="proyecto_entornos.RegresionTest" time="0.001"/>
+  <testcase name="testProductosAnadidosAlPedido" classname="proyecto_entornos.RegresionTest" time="0.001">
+    <system-out><![CDATA[Este cliente Javier acaba de realizar un pedido.
+El producto Software A ha sido añadido al pedido.
+El producto Ratón ha sido añadido al pedido.
+]]></system-out>
+  </testcase>
+  <testcase name="testConstructorClienteCorrecto" classname="proyecto_entornos.RegresionTest" time="0.0"/>
+  <testcase name="testClienteVipSinAntiguedadSuficiente" classname="proyecto_entornos.RegresionTest" time="0.0"/>
+  <testcase name="testPrecioNegativoLanzaExcepcion" classname="proyecto_entornos.RegresionTest" time="0.001"/>
+  <testcase name="testCosteEnvioSumaAlPrecio" classname="proyecto_entornos.RegresionTest" time="0.001"/>
+  <testcase name="testCosteEnvioNegativoLanzaExcepcion" classname="proyecto_entornos.RegresionTest" time="0.0"/>
+  <testcase name="testEnvioFranciaEsCincoPesos" classname="proyecto_entornos.RegresionTest" time="0.0"/>
 </testsuite>
