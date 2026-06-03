@@ -57,6 +57,7 @@ public class Pedidos
     /**
      * Asignamos el cliente que realiza este pedido
      * @param cliente Cliente que realiza el pedido
+     * @throws IllegalArgumentException si el cliente
      */
     public void asignarCliente(Cliente cliente)
     {
@@ -67,6 +68,7 @@ public class Pedidos
     /**
      * Agregamos un producto al pedido con cantidad 1
      * @param producto Producto a añadir
+     * @throws IllegalArgumentException si el producto
      */
     public void agregarProducto(Producto producto)
     {
@@ -87,8 +89,8 @@ public class Pedidos
  
     /**
      * Calcula el total del pedido sumando el precio final de todos los productos.
-     * @throws IllegalStateException si el pedido no tiene productos
      * @return Total del pedido en euros
+     * @throws IllegalStateException si el pedido no tiene productos
      */
     public double calcularTotal()
     {
@@ -105,10 +107,16 @@ public class Pedidos
     }
  
     /**
-     * Muestra un resumen completo del pedido por pantalla.
+     * Muestra por consola un resumen completo del pedido:
+     * id, cliente, lista de productos y total.
+     * @throws IllegalStateException si no se ha asignado un cliente al pedido
      */
     public void mostrarResumen()
     {
+        if (cliente == null)
+        {
+            throw new IllegalStateException("No se puede mostrar el resumen sin un cliente asignado.");
+        }
         System.out.println("********** RESUMEN DEL PEDIDO **********");
         System.out.println("ID Pedido: " + idPedido);
         System.out.println("Cliente: " + cliente.getNombre());
