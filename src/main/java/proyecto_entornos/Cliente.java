@@ -22,17 +22,16 @@ public class Cliente
     }
 
     /**
-     * Constructor completo con todos los atributos.
-     * @param id Identificador único del cliente
+     * Constructor completo con todos los atributos
+     * @param id Identificador unico del cliente
      * @param nombre Nombre completo del cliente
      * @param correo Correo electrónico del cliente
      * @param direccion Dirección postal del cliente
      * @param annosAntiguedad Años que lleva siendo cliente
-     * @param esVip Si el cliente tiene estado VIP
+     * @param esVip Si el cliente es vip
      * @param pais País de residencia del cliente
      */
-    public Cliente(String id, String nombre, String correo, String direccion,
-                   int annosAntiguedad, boolean esVip, String pais)
+    public Cliente(String id, String nombre, String correo, String direccion, int annosAntiguedad, boolean esVip, String pais)
     {
         this.id = id;
         this.nombre = nombre;
@@ -115,10 +114,10 @@ public class Cliente
     }
 
     /**
-     * Calcula el porcentaje de descuento de fidelidad del cliente.
-     * VIP + más de 3 años: 15%
-     * VIP sin antigüedad suficiente: 10%
-     * No VIP con más de 5 años: 5%
+     * Calcula el porcentaje de descuento de fidelidad del cliente
+     * vip + más de 3 años: 15%
+     * vip sin antigüedad suficiente: 10%
+     * No vip con más de 5 años: 5%
      * Sin descuento: 0%
      * @return Porcentaje de descuento como valor entre 0.0 y 1.0
      */

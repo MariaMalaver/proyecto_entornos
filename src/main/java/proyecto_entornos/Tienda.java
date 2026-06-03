@@ -10,7 +10,7 @@ public class Tienda
     private List<Factura> facturas;
 
     /**
-     * Constructor de la Tienda.
+     * Constructor de la Tienda
      * @param nombre Nombre comercial de la tienda
      */
     public Tienda(String nombre)
@@ -82,7 +82,7 @@ public class Tienda
     }
 
     /**
-     * Calcula la suma de los precios base (sin IVA ni envío) de todos los productos
+     * Calcula la suma de los precios base de todos los productos
      * @param pedido Pedido con los productos
      * @return Total neto sin impuestos
      */
@@ -117,8 +117,8 @@ public class Tienda
     }
 
     /**
-     * Calcula el coste total de envío de los productos físicos del pedido.
-     * El coste depende del país del cliente.
+     * Calcula el coste total de envío de los productos físicos del pedido
+     * El coste depende del país del cliente
      * @param pedido Pedido con los productos
      * @param paisCliente País de destino del envío
      * @return Coste total de envío

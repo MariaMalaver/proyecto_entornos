@@ -17,11 +17,12 @@ public class Factura
     private String idPedido;
 
     /**
-     * Constructor de Factura. El código se genera automáticamente.
-     * @param totalNeto Suma de precios base sin impuestos ni envío
+     * Constructor de Factura
+     * El código se genera automáticamente con un prefijo "FAC-" seguido de 8 caracteres aleatorios
+     * @param totalNeto Suma de precios base sin impuestos ni envio
      * @param totalIva Importe total de IVA aplicado
      * @param totalEnvio Importe total de costes de envío
-     * @param descuentoAplicado Importe descontado por fidelidad
+     * @param descuentoAplicado Importe de descuento por fidelidad
      * @param totalFinal Importe final a pagar por el cliente
      * @param nombreCliente Nombre del cliente titular de la factura
      * @param idPedido Identificador del pedido al que corresponde

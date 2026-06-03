@@ -36,7 +36,7 @@ public class Pedidos
     }
     
     /**
-     * Devolvemos la lista de productos del pedido.
+     * Devolvemos la lista de productos del pedido
      * @return Lista de productos
      */
     public ArrayList<Producto> getProducto() 
@@ -45,7 +45,7 @@ public class Pedidos
     }
 
     /**
-     * Devuelve el mapa de cantidades por nombre de producto.
+     * Devolvemos el mapa de cantidades por nombre de producto
      * @return Mapa nombre-cantidad
      */
     public Map<String, Integer> getCantidades()
@@ -55,7 +55,7 @@ public class Pedidos
 
     /* METODOS */
     /**
-     * Asigna el cliente que realiza este pedido.
+     * Asignamos el cliente que realiza este pedido
      * @param cliente Cliente que realiza el pedido
      */
     public void asignarCliente(Cliente cliente)
@@ -65,7 +65,7 @@ public class Pedidos
     }
  
     /**
-     * Agrega un producto al pedido con cantidad 1.
+     * Agregamos un producto al pedido con cantidad 1
      * @param producto Producto a añadir
      */
     public void agregarProducto(Producto producto)
@@ -76,7 +76,7 @@ public class Pedidos
     }
  
     /**
-     * Elimina un producto del pedido.
+     * Eliminamos un producto del pedido.
      * @param producto Producto a eliminar
      */
     public void eliminarProducto(Producto producto)

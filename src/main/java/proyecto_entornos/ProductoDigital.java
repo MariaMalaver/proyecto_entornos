@@ -7,10 +7,10 @@ public class ProductoDigital extends Producto //HERENCIA
     private String tipoIva;
 
     // Constantes IVA
-    private static final double IVA_GENERAL   = 0.21;
-    private static final double IVA_REDUCIDO  = 0.10;
-    private static final double IVA_SUPER     = 0.04;
-    private static final double IVA_DEFAULT   = IVA_GENERAL;
+    private static final double IVA_GENERAL = 0.21;
+    private static final double IVA_REDUCIDO = 0.10;
+    private static final double IVA_SUPER = 0.04;
+    private static final double IVA_DEFAULT = IVA_GENERAL;
     
     /*CONTRUSTOR*/
     public ProductoDigital(String nombre, double precio, double tamannioDescarga, String licencia)
@@ -22,15 +22,14 @@ public class ProductoDigital extends Producto //HERENCIA
     }
     
     /**
-     * Constructor completo con tipo de IVA.
+     * Constructor completo con tipo de IVA
      * @param nombre Nombre del producto digital
      * @param precio Precio base del producto
      * @param tamannioDescarga Tamaño en MB del archivo de descarga
      * @param licencia Tipo de licencia del producto
      * @param tipoIva Tipo de IVA: "GENERAL" (21%), "REDUCIDO" (10%) o "SUPER" (4%)
      */
-    public ProductoDigital(String nombre, double precio, double tamannioDescarga,
-                           String licencia, String tipoIva)
+    public ProductoDigital(String nombre, double precio, double tamannioDescarga, String licencia, String tipoIva)
     {
         super(nombre, precio);
         this.tamannioDescarga = tamannioDescarga;
@@ -69,7 +68,7 @@ public class ProductoDigital extends Producto //HERENCIA
     }
 
     /**
-     * Aplica el IVA al precio base según el tipo indicado.
+     * Aplica el IVA al precio base según el tipo indicado
      * @param tipoIva "GENERAL" (21%), "REDUCIDO" (10%) o "SUPER" (4%)
      * @return Precio con IVA aplicado
      */
@@ -93,8 +92,8 @@ public class ProductoDigital extends Producto //HERENCIA
     }
 
     /**
-     * Calcula el precio final aplicando el IVA configurado en el atributo tipoIva.
-     * Los productos digitales no tienen coste de envío.
+     * Calcula el precio final aplicando el IVA configurado en el atributo tipoIva
+     * Los productos digitales no tienen coste de envío
      * @return Precio final con IVA incluido
      */
     @Override
@@ -104,16 +103,16 @@ public class ProductoDigital extends Producto //HERENCIA
     }
  
     /**
-     * Devuelve la tasa de IVA aplicada como valor decimal.
-     * @return Tasa de IVA (ej: 0.21 para GENERAL)
+     * Devuelve la tasa de IVA aplicada como valor decimal
+     * @return Tasa de IVA
      */
     public double getTasaIva()
     {
         switch (this.tipoIva)
         {
             case "REDUCIDO": return IVA_REDUCIDO;
-            case "SUPER":    return IVA_SUPER;
-            default:         return IVA_GENERAL;
+            case "SUPER": return IVA_SUPER;
+            default: return IVA_GENERAL;
         }
     }
 

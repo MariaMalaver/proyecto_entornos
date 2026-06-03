@@ -5,10 +5,10 @@ public class ProductoFisico extends Producto //HERENCIA
     /*ATRIBUTOS*/
     private double peso;
 
-    // Constantes de coste de envío por zona - Clean Code, sin números mágicos
-    private static final double ENVIO_ESPANNA       = 0.0;
-    private static final double ENVIO_ZONA_CERCANA  = 5.0;  // Francia, Italia, Portugal
-    private static final double ENVIO_RESTO   = 10.0;
+    // Constantes de coste de envío por zona
+    private static final double ENVIO_ESPANNA = 0.0;
+    private static final double ENVIO_ZONA_CERCANA  = 5.0;
+    private static final double ENVIO_RESTO = 10.0;
     
     /*CONSTRUCTOR ORIGINAL*/
     public ProductoFisico(String nombre, double precio, double costeEnvio)
@@ -23,10 +23,10 @@ public class ProductoFisico extends Producto //HERENCIA
     }
 
     /**
-     * Constructor completo con peso explícito.
+     * Constructor completo con peso
      * @param nombre Nombre del producto
      * @param precio Precio base del producto
-     * @param peso Peso del producto en kg (determina el coste de envío)
+     * @param peso Peso del producto en kg para calcular el coste de envío
      * @param zonaDestino País de destino para calcular el envío
      */
     public ProductoFisico(String nombre, double precio, double peso, String zonaDestino)
@@ -51,8 +51,8 @@ public class ProductoFisico extends Producto //HERENCIA
     }
     
     /**
-     * Mantiene compatibilidad con código existente que usaba getCosteEnvio().
-     * Calcula el coste para España por defecto.
+     * Mantiene compatibilidad con código existente que usaba getCosteEnvio()
+     * Calcula el coste para España por defecto
      * @return Coste de envío base
      */
     public double getCosteEnvio()
@@ -61,8 +61,8 @@ public class ProductoFisico extends Producto //HERENCIA
     }
  
     /**
-     * Calcula el coste de envío según el país de destino.
-     * España: 0€ | Francia, Italia, Portugal: 5€ | Resto: 10€
+     * Calcula el coste de envío según el país de destino
+     * España: 0€ Francia, Italia, Portugal: 5€ Resto: 10€
      * @param paisDestino País de destino del envío
      * @return Coste de envío en euros
      */
@@ -87,9 +87,9 @@ public class ProductoFisico extends Producto //HERENCIA
     }
  
     /**
-     * Calcula el precio final sumando el precio base más el coste de envío.
-     * Por defecto usa España (sin coste de envío extra).
-     * Para envíos internacionales usar calcularPrecioFinalConZona().
+     * Calcula el precio final sumando el precio base más el coste de envío
+     * Por defecto usa España
+     * Para envíos internacionales usar calcularPrecioFinalConZona()
      * @return Precio final del producto
      */
     @Override
@@ -99,7 +99,7 @@ public class ProductoFisico extends Producto //HERENCIA
     }
  
     /**
-     * Calcula el precio final con el coste de envío según la zona de destino.
+     * Calcula el precio final con el coste de envío según la zona de destino
      * @param paisDestino País de destino del envío
      * @return Precio final con envío incluido
      */

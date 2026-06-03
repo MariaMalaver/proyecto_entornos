@@ -18,7 +18,7 @@ public class Producto
     }
 
     /**
-     * Constructor de compatibilidad sin id (para código existente).
+     * Constructor sin id
      * @param nombre Nombre del producto
      * @param precio Precio del producto
      * @throws IllegalArgumentException si el precio es negativo
@@ -71,7 +71,7 @@ public class Producto
     //CALCULAR PRECIO FINAL
     /**
      * Calcula el precio final del producto.
-     * Las subclases sobreescriben este método para aplicar IVA o coste de envío.
+     * Las subclases sobreescriben este método para aplicar IVA o coste de envío
      * @return Precio final del producto
      */
     public double calcularPrecioFinal()
