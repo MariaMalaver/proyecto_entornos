@@ -11,15 +11,15 @@ public class ProductoFisico extends Producto //HERENCIA
     private static final double ENVIO_RESTO = 10.0;
     
     /*CONSTRUCTOR ORIGINAL*/
-    public ProductoFisico(String nombre, double precio, double costeEnvio)
+    public ProductoFisico(String nombre, double precio, double peso)
     {
         super(nombre, precio);
-        if (costeEnvio < 0)
+        if (peso < 0)
         {
-            throw new IllegalArgumentException("El coste de envío no puede ser negativo.");
+            throw new IllegalArgumentException("El peso no puede ser negativo.");
         }
         // En el constructor original costeEnvio se usaba como peso aproximado
-        this.peso = costeEnvio;
+        this.peso = peso;
     }
 
     /**
@@ -28,6 +28,7 @@ public class ProductoFisico extends Producto //HERENCIA
      * @param precio Precio base del producto
      * @param peso Peso del producto en kg para calcular el coste de envío
      * @param zonaDestino País de destino para calcular el envío
+     * @throws IllegalArgumentException si el precio o el peso son negativos
      */
     public ProductoFisico(String nombre, double precio, double peso, String zonaDestino)
     {
@@ -47,6 +48,10 @@ public class ProductoFisico extends Producto //HERENCIA
     }
     public void setPeso(double peso) 
     { 
+        if (peso < 0)
+        {
+            throw new IllegalArgumentException("El peso no puede ser negativo.");
+        }
         this.peso = peso; 
     }
     
@@ -87,15 +92,15 @@ public class ProductoFisico extends Producto //HERENCIA
     }
  
     /**
-     * Calcula el precio final sumando el precio base más el coste de envío
-     * Por defecto usa España
-     * Para envíos internacionales usar calcularPrecioFinalConZona()
-     * @return Precio final del producto
+     * Calcula el precio final del producto sumando el precio base y el coste
+     * de envío a España
+     * Para envíos internacionales utilizar
+     * @return Precio final con envío a España incluido
      */
     @Override
     public double calcularPrecioFinal()
     {
-        return getPrecio() + this.peso;
+        return getPrecio() + ENVIO_ESPANNA;
     }
  
     /**
@@ -111,10 +116,11 @@ public class ProductoFisico extends Producto //HERENCIA
     @Override
     public String toString()
     {
-        String salida = super.toString();
-        salida += "Peso: " + this.peso + " kg\n";
-        salida += "Coste de envío (España): " + ENVIO_ESPANNA + "€";
-        return salida;
+        return super.toString()
+               + "Peso: " + this.peso + " kg\n"
+               + "Envío España: " + ENVIO_ESPANNA + " €\n"
+               + "Envío zona cercana (Francia/Italia/Portugal): " + ENVIO_ZONA_CERCANA + " €\n"
+               + "Envío resto del mundo: " + ENVIO_RESTO + " €\n";
     }
 }
  
