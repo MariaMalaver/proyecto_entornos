@@ -26,8 +26,8 @@ public class TiendaTest
         clienteVip = new Cliente("C002", "Carlos", "carlos@test.com", "Av. Principal 5", 5, true, "España");
         clienteFrancia = new Cliente("C003", "Pierre", "pierre@test.com", "Rue de Paris 3", 0, false, "Francia");
         software = new ProductoDigital("Antivirus", 100.00, 440, "Licencia anual", "GENERAL");
-        teclado  = new ProductoFisico("Teclado mecánico", 50.00, 1.2, "España");
-        pedido   = new Pedidos();
+        teclado = new ProductoFisico("Teclado mecánico", 50.00, 1.2, "España");
+        pedido = new Pedidos();
     }
 
     // PRUEBAS DE INTEGRACIÓN POSITIVAS
@@ -56,16 +56,16 @@ public class TiendaTest
     {
         // ARRANGE
         pedido.asignarCliente(clienteEspanna);
-        pedido.agregarProducto(software); // 100€ + 21% IVA = 121€
+        pedido.agregarProducto(software);
 
         // ACT
         Factura factura = tienda.realizarVenta(clienteEspanna, pedido);
 
         // ASSERT
         assertEquals(100.0, factura.getTotalNeto(), 0.01, "El neto debe ser el precio base");
-        assertEquals(21.0,  factura.getTotalIva(),  0.01, "El IVA debe ser 21€ sobre 100€");
-        assertEquals(0.0,   factura.getTotalEnvio(), 0.01, "Producto digital no tiene envío");
-        assertEquals(0.0,   factura.getDescuentoAplicado(), 0.01, "Sin descuento para cliente estándar");
+        assertEquals(21.0, factura.getTotalIva(),  0.01, "El IVA debe ser 21€ sobre 100€");
+        assertEquals(0.0, factura.getTotalEnvio(), 0.01, "Producto digital no tiene envío");
+        assertEquals(0.0, factura.getDescuentoAplicado(), 0.01, "Sin descuento para cliente estándar");
         assertEquals(121.0, factura.getTotalFinal(), 0.01, "Total final debe ser 121€");
     }
 
@@ -118,8 +118,8 @@ public class TiendaTest
 
         // ASSERT
         assertEquals(150.0, factura.getTotalNeto(),  0.01, "Neto = 100 + 50");
-        assertEquals(21.0,  factura.getTotalIva(),   0.01, "IVA solo del digital");
-        assertEquals(0.0,   factura.getTotalEnvio(), 0.01, "Envío España = 0€");
+        assertEquals(21.0, factura.getTotalIva(),   0.01, "IVA solo del digital");
+        assertEquals(0.0, factura.getTotalEnvio(), 0.01, "Envío España = 0€");
         assertEquals(171.0, factura.getTotalFinal(), 0.01, "Total = 150 + 21");
     }
 
