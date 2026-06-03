@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Producto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-gestion-pedidos</a> &gt; <a href="index.source.html" class="el_package">proyecto_entornos</a> &gt; <span class="el_source">Producto.java</span></div><h1>Producto.java</h1><pre class="source lang-java linenums">package proyecto_entornos;
+public class Producto 
+{
+    /*ATRIBUTOS*/
+    private String nombre;
+    private double precio; 
+    
+    /*CONTRUSTOR*/
+    public Producto(String nombre, double precio)
+<span class="fc" id="L10">    {</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (precio &lt; 0) {</span>
+<span class="fc" id="L12">            throw new IllegalArgumentException(&quot;El precio no puede ser negativo.&quot;);</span>
+        }
+<span class="fc" id="L14">        this.nombre = nombre;</span>
+<span class="fc" id="L15">        this.precio = precio;</span>
+<span class="fc" id="L16">    }</span>
+
+    /*METODOS GET Y SET*/
+    //NOMBRE
+    public String getNombre()
+    {
+<span class="fc" id="L22">        return this.nombre;</span>
+    }
+    public void setNombre(String nombre)
+    {
+<span class="nc" id="L26">        this.nombre = nombre;</span>
+<span class="nc" id="L27">    }</span>
+    //PRECIO
+    public double getPrecio()
+    {
+<span class="fc" id="L31">        return this.precio;</span>
+    }
+    public void setPrecio(double precio)
+    {
+<span class="nc" id="L35">        this.precio = precio;</span>
+<span class="nc" id="L36">    }</span>
+
+    /* METODOS */
+    //CALCULAR PRECIO FINAL
+    public double calcularPrecioFinal()
+    {
+<span class="nc" id="L42">        return this.precio;</span>
+    }
+
+    //toString
+    @Override
+    public String toString()
+    {
+<span class="nc" id="L49">        String salida = &quot;\nNombre: &quot; + this.nombre + &quot;\n&quot;;</span>
+<span class="nc" id="L50">        salida += &quot;Precio: &quot; + this.precio + &quot;\n&quot;;</span>
+<span class="nc" id="L51">        return salida;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

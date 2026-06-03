@@ -1,0 +1,47 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class Cliente {
+  -nombre: String
+  -correo: String
+  -direccion: String
+  --
+  +Cliente()
+}
+
+class Pedido {
+  -productos: ArrayList<Producto>
+  -cliente: Cliente
+  --
+  +Pedido()
+  +asignarCliente(cliente: Cliente): void
+  +agregarProducto(producto: Producto): void
+}
+
+class Producto {
+  -nombre: String
+  -precio: double
+  --
+  +Producto()
+}
+
+class ProductoDigital {
+  -tamannioDescarga: double
+  -licencia: String
+  --
+  +ProductoDigital()
+}
+
+class ProductoFisico {
+  -costeEnvio: double
+  --
+  +ProductoFisico()
+}
+
+Pedido o-- Producto
+Pedido *-- Cliente
+ProductoDigital --|> Producto
+ProductoFisico --|> Producto
+
+@enduml
