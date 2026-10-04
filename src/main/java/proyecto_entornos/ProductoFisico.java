@@ -1,5 +1,11 @@
 
 package proyecto_entornos;
+
+/**
+ * Represents a physical product sold by the store.
+ * Extends the generic Product class and includes weight
+ * and destination-based shipping costs.
+ */
 public class ProductoFisico extends Producto //HERENCIA
 {
     /*ATRIBUTOS*/
@@ -11,6 +17,14 @@ public class ProductoFisico extends Producto //HERENCIA
     private static final double ENVIO_RESTO = 10.0;
     
     /*CONSTRUCTOR ORIGINAL*/
+    /**
+     * Creates a physical product with a name, base price, and weight.
+     *
+     * @param nombre the product name
+     * @param precio the base price of the product
+     * @param peso the product weight in kilograms
+     * @throws IllegalArgumentException if the weight is negative
+     */
     public ProductoFisico(String nombre, double precio, double peso)
     {
         super(nombre, precio);
@@ -23,12 +37,12 @@ public class ProductoFisico extends Producto //HERENCIA
     }
 
     /**
-     * Constructor completo con peso
-     * @param nombre Nombre del producto
-     * @param precio Precio base del producto
-     * @param peso Peso del producto en kg para calcular el coste de envío
-     * @param zonaDestino País de destino para calcular el envío
-     * @throws IllegalArgumentException si el precio o el peso son negativos
+     * Full constructor including weight
+     * @param nombre Product name
+     * @param precio Base product price
+     * @param peso Product weight in kg for calculating shipping cost
+     * @param zonaDestino Destination country for calculating shipping
+     * @throws IllegalArgumentException if price or weight is negative
      */
     public ProductoFisico(String nombre, double precio, double peso, String zonaDestino)
     {
@@ -42,10 +56,22 @@ public class ProductoFisico extends Producto //HERENCIA
     
     /*METODOS GET Y SET*/
     //PESO
+    /**
+     * Returns the product weight.
+     *
+     * @return the product weight in kilograms
+     */
     public double getPeso() 
     { 
         return this.peso; 
     }
+
+    /**
+     * Sets the product weight.
+     *
+     * @param peso the new product weight in kilograms
+     * @throws IllegalArgumentException if the weight is negative
+     */
     public void setPeso(double peso) 
     { 
         if (peso < 0)
@@ -56,9 +82,9 @@ public class ProductoFisico extends Producto //HERENCIA
     }
     
     /**
-     * Mantiene compatibilidad con código existente que usaba getCosteEnvio()
-     * Calcula el coste para España por defecto
-     * @return Coste de envío base
+     * Maintains compatibility with existing code that used getCosteEnvio()
+     * Calculates the cost for Spain by default
+     * @return Base shipping cost
      */
     public double getCosteEnvio()
     {
@@ -66,10 +92,10 @@ public class ProductoFisico extends Producto //HERENCIA
     }
  
     /**
-     * Calcula el coste de envío según el país de destino
-     * España: 0€ Francia, Italia, Portugal: 5€ Resto: 10€
-     * @param paisDestino País de destino del envío
-     * @return Coste de envío en euros
+     * Calculates the shipping cost based on the destination country
+     * Spain: €0; France, Italy, Portugal: €5; Rest: €10
+     * @param paisDestino Destination country for the shipment
+     * @return Shipping cost in euros
      */
     public double calcularCosteEnvio(String paisDestino)
     {
@@ -92,10 +118,9 @@ public class ProductoFisico extends Producto //HERENCIA
     }
  
     /**
-     * Calcula el precio final del producto sumando el precio base y el coste
-     * de envío a España
-     * Para envíos internacionales utilizar
-     * @return Precio final con envío a España incluido
+     * Calculates the final product price by adding the base price and the shipping cost to Spain.
+     * For international shipments, use...
+     * @return Final price including shipping to Spain
      */
     @Override
     public double calcularPrecioFinal()
@@ -104,15 +129,20 @@ public class ProductoFisico extends Producto //HERENCIA
     }
  
     /**
-     * Calcula el precio final con el coste de envío según la zona de destino
-     * @param paisDestino País de destino del envío
-     * @return Precio final con envío incluido
+     * Calculates the final price including shipping costs based on the destination zone
+     * @param paisDestino Destination country for the shipment
+     * @return Final price including shipping
      */
     public double calcularPrecioFinalConZona(String paisDestino)
     {
         return getPrecio() + calcularCosteEnvio(paisDestino);
     }
- 
+    
+    /**
+     * Returns a string representation of the physical product.
+     *
+     * @return a string containing the product, weight, and shipping information
+    */
     @Override
     public String toString()
     {
