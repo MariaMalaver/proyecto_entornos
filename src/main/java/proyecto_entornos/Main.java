@@ -1,6 +1,18 @@
 package proyecto_entornos;
+
+/**
+ * Main entry point of the application.
+ * Demonstrates the creation of products, customers, and orders.
+ */
 public class Main 
 {
+    /**
+     * Executes the main application flow.
+     * Creates digital and physical products, customers, and orders,
+     * and displays the resulting order summaries.
+     *
+     * @param args command-line arguments
+     */
     public static void main(String[] args) 
     {
         //DISTINTOS PRODUCTOS

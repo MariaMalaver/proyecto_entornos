@@ -1,7 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-sistema-gestion-pedidos,proyecto_entornos,ProductoFisico,17,23,0,2,6,6,3,3,3,2
-sistema-gestion-pedidos,proyecto_entornos,Cliente,8,25,0,0,4,10,2,5,2,5
-sistema-gestion-pedidos,proyecto_entornos,Producto,22,24,0,2,8,8,4,4,4,3
-sistema-gestion-pedidos,proyecto_entornos,Main,239,0,0,0,62,0,2,0,2,0
-sistema-gestion-pedidos,proyecto_entornos,Pedidos,42,56,2,4,11,15,3,6,2,4
-sistema-gestion-pedidos,proyecto_entornos,ProductoDigital,29,16,0,0,10,5,5,2,5,2

@@ -3,6 +3,10 @@ package proyecto_entornos;
 import java.time.LocalDate;
 import java.util.UUID;
 
+/**
+ * Represents an invoice generated for a customer order.
+ * Stores the invoice identifier, issue date, order totals, applied discount, customer information, and final amount.
+ */
 public class Factura
 {
     /*ATRIBUTOS*/
@@ -17,15 +21,15 @@ public class Factura
     private String idPedido;
 
     /**
-     * Constructor de Factura
-     * El código se genera automáticamente con un prefijo "FAC-" seguido de 8 caracteres aleatorios
-     * @param totalNeto Suma de precios base sin impuestos ni envio
-     * @param totalIva Importe total de IVA aplicado
-     * @param totalEnvio Importe total de costes de envío
-     * @param descuentoAplicado Importe de descuento por fidelidad
-     * @param totalFinal Importe final a pagar por el cliente
-     * @param nombreCliente Nombre del cliente titular de la factura
-     * @param idPedido Identificador del pedido al que corresponde
+     * Invoice constructor
+     * The code is automatically generated with a "FAC-" prefix followed by 8 random characters
+     * @param totalNeto Sum of base prices excluding taxes and shipping
+     * @param totalIva Total VAT amount applied
+     * @param totalEnvio Total shipping cost amount
+     * @param descuentoAplicado Loyalty discount amount
+     * @param totalFinal Final amount to be paid by the customer
+     * @param nombreCliente Name of the customer holding the invoice
+     * @param idPedido Identifier of the corresponding order
      */
     public Factura(double totalNeto, double totalIva, double totalEnvio, double descuentoAplicado, double totalFinal, String nombreCliente, String idPedido)
     {
@@ -41,63 +45,100 @@ public class Factura
     }
 
     /*GETTERS*/
-    /** @return Codigo unico de la factura generado automaticamente */
+
+    /**
+     * Returns the automatically generated invoice code.
+     *
+     * @return the unique invoice code
+     */
     public String getCodigoFactura()
     { 
         return codigoFactura; 
     }
 
-    /** @return Fecha de emisión de la factura */
+    /**
+     * Returns the invoice issue date.
+     *
+     * @return the date on which the invoice was issued
+     */
     public LocalDate getFechaEmision() 
     { 
         return fechaEmision; 
     }
 
-    /** @return Total neto sin impuestos ni envío */
+    /**
+     * Returns the net total before taxes and shipping.
+     *
+     * @return the net total amount
+     */
     public double getTotalNeto() 
     { 
         return totalNeto; 
     }
 
-    /** @return Importe total de IVA */
+    /**
+     * Returns the total VAT amount.
+     *
+     * @return the VAT amount
+     */
     public double getTotalIva() 
     { 
         return totalIva; 
     }
 
-    /** @return Importe total de costes de envío */
+    /**
+     * Returns the total shipping cost.
+     *
+     * @return the total shipping cost
+     */
     public double getTotalEnvio() 
     { 
         return totalEnvio; 
     }
 
-    /** @return Descuento aplicado por fidelidad */
+    /**
+     * Returns the loyalty discount applied to the invoice.
+     *
+     * @return the applied discount amount
+     */
     public double getDescuentoAplicado() 
     { 
         return descuentoAplicado; 
     }
 
-    /** @return Importe final a pagar */
+    /**
+     * Returns the final amount to be paid by the customer.
+     *
+     * @return the final invoice amount
+     */
     public double getTotalFinal() 
     { 
         return totalFinal; 
     }
 
-    /** @return Nombre del cliente */
+    /**
+     * Returns the name of the customer associated with the invoice.
+     *
+     * @return the customer's name
+     */
     public String getNombreCliente() 
     { 
         return nombreCliente; 
     }
 
-    /** @return ID del pedido asociado */
+    /**
+     * Returns the identifier of the associated order.
+     *
+     * @return the order identifier
+     */
     public String getIdPedido() 
     { 
         return idPedido; 
     }
 
     /**
-     * Imprime la factura
-     * Muestra el importe de cada concepto: IVA, envio y descuentos.
+     * Print the invoice.
+     * Shows the invoice code, date, customer, order, VAT, shipping cost, discount, and final total.
      */
     public void mostrarDesglose()
     {
@@ -118,6 +159,11 @@ public class Factura
         System.out.println("============================================");
     }
 
+    /**
+     * Returns a string representation of the invoice.
+     *
+     * @return a string containing the main invoice information
+     */
     @Override
     public String toString()
     {

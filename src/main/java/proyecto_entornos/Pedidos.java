@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Represents a customer order.
+ * Stores the order identifier, associated customer,
+ * products, and quantities.
+ */
 public class Pedidos 
 {
     /* LISTAS */
@@ -17,6 +22,10 @@ public class Pedidos
     private static int contadorPedidos = 1;
 
     /* CONSTRUCTOR */
+    /**
+     * Creates a new empty order.
+     * Generates a unique order identifier automatically.
+     */
     public Pedidos()
     {
         this.idPedido = "PED-" + contadorPedidos++;
@@ -26,18 +35,29 @@ public class Pedidos
     }
 
     /*GETTERS*/
+    /**
+     * Returns the unique identifier of the order.
+     *
+     * @return the order identifier
+     */
     public String getIdPedido() 
     { 
         return idPedido; 
     }
+
+    /**
+     * Returns the customer associated with the order.
+     *
+     * @return the customer associated with the order, or null if none is assigned
+     */
     public Cliente getCliente() 
     { 
         return cliente; 
     }
     
     /**
-     * Devolvemos la lista de productos del pedido
-     * @return Lista de productos
+     * Returns the list of products in the order
+     * @return List of products
      */
     public ArrayList<Producto> getProducto() 
     {    
@@ -45,8 +65,8 @@ public class Pedidos
     }
 
     /**
-     * Devolvemos el mapa de cantidades por nombre de producto
-     * @return Mapa nombre-cantidad
+     * Returns the map of quantities by product name
+     * @return Name-quantity map
      */
     public Map<String, Integer> getCantidades()
     {
@@ -55,9 +75,9 @@ public class Pedidos
 
     /* METODOS */
     /**
-     * Asignamos el cliente que realiza este pedido
-     * @param cliente Cliente que realiza el pedido
-     * @throws IllegalArgumentException si el cliente
+     * Assigns the customer placing this order
+     * @param cliente The customer placing the order
+     * @throws IllegalArgumentException if the customer
      */
     public void asignarCliente(Cliente cliente)
     {
@@ -66,9 +86,9 @@ public class Pedidos
     }
  
     /**
-     * Agregamos un producto al pedido con cantidad 1
-     * @param producto Producto a añadir
-     * @throws IllegalArgumentException si el producto
+     * Adds a product to the order with a quantity of 1
+     * @param producto Product to add
+     * @throws IllegalArgumentException if the product
      */
     public void agregarProducto(Producto producto)
     {
@@ -78,8 +98,8 @@ public class Pedidos
     }
  
     /**
-     * Eliminamos un producto del pedido.
-     * @param producto Producto a eliminar
+     * Removes a product from the order.
+     * @param producto Product to remove
      */
     public void eliminarProducto(Producto producto)
     {
@@ -88,9 +108,9 @@ public class Pedidos
     }
  
     /**
-     * Calcula el total del pedido sumando el precio final de todos los productos.
-     * @return Total del pedido en euros
-     * @throws IllegalStateException si el pedido no tiene productos
+     * Calculates the order total by summing the final price of all products.
+     * @return Order total in euros
+     * @throws IllegalStateException if the order contains no products
      */
     public double calcularTotal()
     {
@@ -107,9 +127,9 @@ public class Pedidos
     }
  
     /**
-     * Muestra por consola un resumen completo del pedido:
-     * id, cliente, lista de productos y total.
-     * @throws IllegalStateException si no se ha asignado un cliente al pedido
+     * Displays a complete summary of the order to the console:
+     * ID, customer, list of products, and total.
+     * @throws IllegalStateException if no customer has been assigned to the order
      */
     public void mostrarResumen()
     {

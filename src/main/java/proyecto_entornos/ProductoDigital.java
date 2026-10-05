@@ -1,4 +1,10 @@
 package proyecto_entornos;
+
+/**
+ * Represents a digital product sold by the store.
+ * Extends the generic Product class and includes download size,
+ * license information, and VAT configuration.
+ */
 public class ProductoDigital extends Producto //HERENCIA
 {
    /*ATRIBUTOS*/
@@ -13,6 +19,14 @@ public class ProductoDigital extends Producto //HERENCIA
     private static final double IVA_DEFAULT = IVA_GENERAL;
     
     /*CONTRUSTOR*/
+    /**
+     * Creates a digital product using the general VAT rate by default.
+     *
+     * @param nombre the product name
+     * @param precio the base price of the product
+     * @param tamannioDescarga the download size in megabytes
+     * @param licencia the product license type
+     */
     public ProductoDigital(String nombre, double precio, double tamannioDescarga, String licencia)
     {
         super(nombre, precio);
@@ -22,12 +36,12 @@ public class ProductoDigital extends Producto //HERENCIA
     }
     
     /**
-     * Constructor completo con tipo de IVA
-     * @param nombre Nombre del producto digital
-     * @param precio Precio base del producto
-     * @param tamannioDescarga Tamaño en MB del archivo de descarga
-     * @param licencia Tipo de licencia del producto
-     * @param tipoIva Tipo de IVA: "GENERAL" (21%), "REDUCIDO" (10%) o "SUPER" (4%)
+     * Full constructor including VAT rate
+     * @param nombre Name of the digital product
+     * @param precio Base price of the product
+     * @param tamannioDescarga Download file size in MB
+     * @param licencia Product license type
+     * @param tipoIva VAT rate: "GENERAL" (21%), "REDUCIDO" (10%), or "SUPER" (4%)
      */
     public ProductoDigital(String nombre, double precio, double tamannioDescarga, String licencia, String tipoIva)
     {
@@ -38,39 +52,73 @@ public class ProductoDigital extends Producto //HERENCIA
     }
 
     /*METODOS GET Y SET*/
-    //COSTE ENVIO
+    //TAMANO DESCARGA
+    /**
+     * Returns the download size of the digital product.
+     *
+     * @return the download size in megabytes
+     */
     public double getTamannioDescarga()
     {
         return this.tamannioDescarga;
     }
+
+    /**
+     * Sets the download size of the digital product.
+     *
+     * @param tamannioDescarga the new download size in megabytes
+     */
     public void setTamannioDescarga(double tamannioDescarga)
     {
         this.tamannioDescarga = tamannioDescarga;
     }
+    
     //LICENCIA
+    /**
+     * Returns the license type of the digital product.
+     *
+     * @return the product license
+     */
     public String getLicencia()
     {
         return this.licencia;
     }
+
+    /**
+     * Sets the license type of the digital product.
+     *
+     * @param licencia the new product license
+     */
     public void setLicencia(String licencia)
     {
         this.licencia = licencia;
     }
 
     //TIPO IVA
+    /**
+     * Returns the VAT type configured for the product.
+     *
+     * @return the configured VAT type
+     */
     public String getTipoIva() 
     { 
         return this.tipoIva; 
     }
+    
+    /**
+     * Sets the VAT type for the product.
+     *
+     * @param tipoIva the new VAT type
+     */
     public void setTipoIva(String tipoIva) 
     { 
         this.tipoIva = tipoIva; 
     }
-
+    
     /**
-     * Aplica el IVA al precio base según el tipo indicado
-     * @param tipoIva "GENERAL" (21%), "REDUCIDO" (10%) o "SUPER" (4%)
-     * @return Precio con IVA aplicado
+     * Applies VAT to the base price according to the specified rate
+     * @param tipoIva "GENERAL" (21%), "REDUCED" (10%), or "SUPER" (4%)
+     * @return Price with VAT applied
      */
     public double aplicarIVA(String tipoIva)
     {
@@ -92,9 +140,9 @@ public class ProductoDigital extends Producto //HERENCIA
     }
 
     /**
-     * Calcula el precio final aplicando el IVA configurado en el atributo tipoIva
-     * Los productos digitales no tienen coste de envío
-     * @return Precio final con IVA incluido
+     * Calculates the final price by applying the VAT configured in the tipoIva attribute.
+     * Digital products have no shipping cost.
+     * @return Final price including VAT.
      */
     @Override
     public double calcularPrecioFinal()
@@ -103,8 +151,8 @@ public class ProductoDigital extends Producto //HERENCIA
     }
  
     /**
-     * Devuelve la tasa de IVA aplicada como valor decimal
-     * @return Tasa de IVA
+     * Returns the applied VAT rate as a decimal value
+     * @return VAT rate
      */
     public double getTasaIva()
     {
@@ -115,7 +163,12 @@ public class ProductoDigital extends Producto //HERENCIA
             default: return IVA_GENERAL;
         }
     }
-
+    /**
+     * Returns a string representation of the digital product.
+     *
+     * @return a string containing the product, download size,
+     * license, and VAT information
+     */
     @Override
     public String toString()
     {
