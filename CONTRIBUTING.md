@@ -4,7 +4,7 @@ Thank you for contributing to the Order Management project.
 
 This document outlines the branching strategy, commit best practices, and Pull Request guidelines that contributors should follow.
 
-1. Branching strategy
+1. Branching strategy.
 
 The `main` branch contains the stable version of the project.
 
@@ -19,7 +19,7 @@ Branch names must follow this structure:
 
 Contributors should avoid making changes directly to the `main` branch.
 
-2. Commit conventions
+2. Commit conventions.
 
 Commits must have clear and descriptive messages.
 
@@ -34,7 +34,7 @@ The project uses the following prefixes:
 
 Commit messages must be written in English and briefly describe the purpose of the change.
 
-3. Pull Request Guidelines
+3. Pull Request Guidelines.
 
 All changes intended for the main branch must be submitted via a *Pull Request*.
 
@@ -56,7 +56,7 @@ Pull Requests must be reviewed before being merged into the main branch.
 
 The reviewer must examine the code or documentation, verify that the changes adhere to project conventions, and provide feedback where necessary.
 
-4. Code and Documentation Standards
+4. Code and Documentation Standards.
 
 Contributors must maintain the project's existing structure and coding style. Java source code must include clear Javadoc documentation for classes and methods, where applicable.
 
